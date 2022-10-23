@@ -1,0 +1,9 @@
+.card-img-top{
+    height: 10vw;
+    object-fit: cover;
+}
+
+.card h5{
+    font-family: monospace;
+    font-weight: 900;
+}
