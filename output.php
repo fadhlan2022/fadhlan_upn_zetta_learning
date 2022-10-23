@@ -15,45 +15,53 @@
             <br>
             <h4>Your Data</h4>
             <br>
-            <form method="POST" action="output.php">
-              <div class="form-group">
-                <label for="first-name"><span style="color: red;">*</span> First Name:</label>
-                <?php echo $_GET["first-name"]; ?>
-              </div>
-              <div class="form-group">
-                <label for="last-name"><span style="color: red;">*</span> Last Name:</label>
-                <?php echo $_GET["last-name"]; ?>
-              </div>
-              <div>
-                <p><span style="color: red;">*</span> Biography:</p>
-                <?php echo $_GET["biography"]; ?>
-              </div>
-              <div>
-                <p><span style="color: red;">*</span> Gender:</p>
-                <?php echo $_GET["gender"]; ?>
-              </div>
-              <div class="form-group">
-                <label for="email"><span style="color: red;">*</span> Email:</label>
-                <?php echo $_GET["email"]; ?>
-              </div>
-              <div class="form-group">
-                <label for="phone"> <span style="color: red;">*</span> Phone Number:</label>
-                <?php echo $_GET["phone"]; ?>
-              </div>
-              <div class="form-group">
-                <label for="age"> <span style="color: red;">*</span> Age:</label>
-                <?php echo $_GET["age"]; ?>
-              </div>
-              <div class="form-group">
-                <label for="url"> <span style="color: red;">*</span> Website Url:</label>
-                <?php echo $_GET["url"]; ?>
-              </div>
-              <div class="form-group">
-                <label for="nationality"> <span style="color: red;">*</span> Nationality:</label>
-                <?php echo $_GET["nationality"]; ?>
-              <button type="submit" class="btn btn-default" style="background-color: brown;">
-                <span style="color: White;">Submit</span></button>
-            </form>
+                <?php
+                $first = $_POST['first_name'];
+                $last = $_POST['last_name'];
+                $biography = $_POST['biography'];
+                $gender = $_POST['gender'];
+                $email = $_POST['email'];
+                $phone = $_POST['phone'];
+                $age = $_POST['age'];
+                $url = $_POST['url'];
+                $nationality = $_POST['nationality'];
+                ?>
+                <center>
+                <table border="1">
+                <tr>
+                  <td><?php echo 'First Name'?></td>
+                  <td><?php echo $first;?></td>
+                </tr>
+                <tr>
+                  <td><?php echo 'Last Name'?></td>
+                  <td><?php echo $first;?></td>
+                </tr>
+                <tr>
+                  <td><?php echo 'Biography';?></td>
+                  <td><?php echo $biography;?></td>
+                </tr>
+                <tr>
+                  <td><?php echo 'Gender';?></td>
+                  <td><?php echo $gender;?></td>
+                </tr>
+                <tr>
+                  <td><?php echo 'Email';?></td>
+                  <td><?php echo $email;?></td>
+                </tr>
+                <tr>
+                  <td><?php echo 'Phone';?></td>
+                  <td><?php echo $phone;?></td>
+                </tr>
+                <tr>
+                  <td><?php echo 'Age';?></td>
+                  <td><?php echo $age;?></td>
+                </tr>
+                <tr>
+                  <td><?php echo 'Website URL';?></td>
+                  <td><?php echo $url;?></td>
+                </tr>
+                </table>
+                </center>
           </div>
           <br>
           </body> 
