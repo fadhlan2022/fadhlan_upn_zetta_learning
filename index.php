@@ -15,46 +15,46 @@
             <br>
             <h4>Registration</h4>
             <br>
-            <form method="POST">
+            <form method="POST" action="output.php">
               <div class="form-group">
                 <label for="first-name"><span style="color: red;">*</span> First Name:</label>
-                <input type="text" class="form-control" id="first-name" placeholder="First Name">
+                <input type="text" class="form-control" id="first-name" name="first-name" placeholder="First Name">
               </div>
               <div class="form-group">
                 <label for="last-name"><span style="color: red;">*</span> Last Name:</label>
-                <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                <input type="text" class="form-control" id="last-name" name="last-name" placeholder="Last Name">
               </div>
               <div>
                 <p><span style="color: red;">*</span> Biography:</p>
-                <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="  Please Input Your Biography"></textarea>
+                <textarea id="biography" name="biography" rows="4" cols="50" placeholder="  Please Input Your Biography"></textarea>
                 </textarea>
               </div>
               <div>
                 <p><span style="color: red;">*</span> Gender:</p>
-                    <input type="radio" id="html" name="fav_language" value="HTML">
+                    <input type="radio" id="html" name="gender" value="HTML">
                       <label for="html">Man</label><br>
-                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <input type="radio" id="css" name="gender" value="CSS">
                       <label for="css">Woman</label><br>
               </div>
               <div class="form-group">
                 <label for="email"><span style="color: red;">*</span> Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="example@email.com">
+                <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com">
               </div>
               <div class="form-group">
                 <label for="phone"> <span style="color: red;">*</span> Phone Number:</label>
-                <input type="text" class="form-control" id="phone" placeholder="Please Input Your Phone Number">
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Please Input Your Phone Number">
               </div>
               <div class="form-group">
                 <label for="age"> <span style="color: red;">*</span> Age:</label>
-                <input type="text" class="form-control" id="age" placeholder="Your Age">
+                <input type="text" class="form-control" id="age" name="age" placeholder="Your Age">
               </div>
               <div class="form-group">
                 <label for="url"> <span style="color: red;">*</span> Website Url:</label>
-                <input type="url" class="form-control" id="url" placeholder="Your Website Url">
+                <input type="url" class="form-control" id="url" name="url" placeholder="Your Website Url">
               </div>
               <div class="form-group">
                 <label for="nationality"> <span style="color: red;">*</span> Nationality:</label>
-                <input type="text" class="form-control" id="nationality" placeholder="Your Nationality">
+                <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Your Nationality">
               </div>
               <button type="submit" class="btn btn-default" style="background-color: brown;">
                 <span style="color: White;">Submit</span></button>
