@@ -1,0 +1,9 @@
+.card-img-top {
+    height: 6vw;
+    object-fit: cover;
+}
+
+.card-img-top1 {
+    height: 3vw;
+    object-fit: scale-down;
+}
