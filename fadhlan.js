@@ -2,42 +2,37 @@
  * @param {Book} book
  * @param {Number} discount
  * @param {Number} tax
+ * @param {Number} stock
+ * @param {Number} order
  */
 
- function cashier(book, discount, tax){
+ function cashier(book, discount, tax, stock, order){
     let result = 0;
-    if(book && book.price){
-        const price = book.price;
-        const totalDiscount = price * (discount/100);
-        const priceAfterDiscount = price - totalDiscount;
-        const totalTax = priceAfterDiscount * (tax/100);
-        const priceAfterTax = priceAfterDiscount + totalTax;
-        result += priceAfterTax;
-
-        console.group();
-        console.log('Original Price', price);
-        console.log('Discount Amount', totalDiscount);
-        console.log('Price After Discount', priceAfterDiscount);
-        console.log('Tax Amount', totalTax);
-        console.log('Price After Tax', priceAfterTax)
-        console.log()
-        console.groupEnd();
+    for(let loopIndex = 0;  loopIndex < order; loopIndex++){
+        if(book && book.price && (loopIndex < stock)){
+            const price = book.price;
+            const totalDiscount = price * (discount/100);
+            const priceAfterDiscount = price - totalDiscount;
+            const totalTax = priceAfterDiscount * (tax/100);
+            const priceAfterTax = priceAfterDiscount + totalTax;
+            result += priceAfterTax;
+    
+            console.group();
+            console.log('[Item - ', loopIndex+1, ']');
+            console.log('Original Price', price);
+            console.log('Discount Amount', totalDiscount);
+            console.log('Price After Discount', priceAfterDiscount);
+            console.log('Tax Amount', totalTax);
+            console.log('Price After Tax', priceAfterTax);
+            console.log();
+            console.groupEnd();
+        }else{
+            console.log('Run out of stock :(');
+            break;
+        }
+        
     }
-
-    // let books = [
-    //     {title: "Book 1", price:5000, publicity: true},
-    //     {title: "Book 2", price:10000, publicity: false},
-    //     {title: "Book 3", price:15000, publicity: true},
-    // ];
-
-    // let resultbook;
-    // for(const book of books){
-    //     if (book && book.publicity){
-    //         resultbook = book;
-    //     }
-    // }
+    console.log('TOTAL', result);
 }
 
-cashier({title: "Book 1", price:5000, publicity: true}, 50, 10);
-cashier({title: "Book 2", price:10000, publicity: false}, 50, 10);
-cashier({title: "Book 3", price:15000, publicity: true}, 50, 10);
+cashier({title: "Book 1", price:5000, publicity: true}, 50, 10, 10, 12);
