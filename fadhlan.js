@@ -16,23 +16,31 @@
             const totalTax = priceAfterDiscount * (tax/100);
             const priceAfterTax = priceAfterDiscount + totalTax;
             result += priceAfterTax;
-    
-            console.group();
-            console.log('[Item - ', loopIndex+1, ']');
-            console.log('Original Price', price);
-            console.log('Discount Amount', totalDiscount);
-            console.log('Price After Discount', priceAfterDiscount);
-            console.log('Tax Amount', totalTax);
-            console.log('Price After Tax', priceAfterTax);
-            console.log();
-            console.groupEnd();
         }else{
             console.log('Run out of stock :(');
             break;
         }
         
     }
-    console.log('TOTAL', result);
+    console.log('TOTAL HARGA', result);
+    return result;
 }
 
-cashier({title: "Book 1", price:5000, publicity: true}, 50, 10, 10, 12);
+/**
+ * @param {Number} result
+ * @param {Number} cicil
+ */
+
+function sistemCicil(result, cicil){
+    hargaTiapCicil = result/cicil;
+    bayarCicil = [];
+    for(let loopIndex2 = 0; loopIndex2<cicil; loopIndex2++){
+        bayarCicil.push({
+            cicilan_ke: loopIndex2+1,
+            harga: hargaTiapCicil
+        })
+    }
+    return bayarCicil;
+}
+
+console.log(sistemCicil(cashier({title: "Book 1", price:5000, publicity: true}, 0, 0, 4, 4), 4));
