@@ -1,0 +1,64 @@
+body {
+    background-image: url("https://external-preview.redd.it/Ky6rI3puxwvdidshWwXsIt6kqc2nFmNd7KKuvjumDTs.jpg?auto=webp&s=998cbe188fef66dd4e3ee6a03c064ba903d6694d");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+  *{
+    font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+  }
+  .header{
+    background-color: rgba(96, 96, 96, 0.7);
+    width:100%;
+    height:20vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .c-white{
+    color: white;
+  }
+
+  .flex-container{
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px white solid;
+    margin: 2vh 2vh;
+    flex-wrap: wrap;
+  }
+  
+  .card{
+    padding: 5px 10px;
+    width: 350px;
+    height: 500px;
+    overflow: scroll;
+    margin: 10px;
+    border-radius: 15px;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    overflow-x: hidden;
+  }
+   .card h2{
+    display: flex;
+    width: auto;
+    margin: 2rem 0px;
+    vertical-align: middle;
+    justify-content: center;
+   }
+   .card img{
+    height: 75%;
+    width: 70%;
+    float: none;
+    object-fit: cover;
+  }
+  .card p{
+    text-align: justify;
+  }
+  .card:hover{
+    background-color: red;
+    color: white;
+  }
