@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-12">
+      <h3>Add Task (individual/group)</h3>
+      <hr>
+      <label>Task Name</label>
+      <input type="text" class="form-control" [(ngModel)]="newTaskName">
+      <label>Task Description</label>
+      <input type="text" class="form-control" [(ngModel)]="newTaskContent">
+      <br>
+      <button
+        class="btn btn-primary"
+        (click)="onAddTask()">Add Individual Task</button>
+      <button
+        class="btn btn-primary"
+        (click)="onAddGroupTask()">Add Group Task</button>
+    </div>
+  </div>
