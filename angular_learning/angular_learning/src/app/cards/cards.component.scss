@@ -1,0 +1,29 @@
+.card{
+    margin: 6px 10px 0px 10px;
+    background-color: rgba($color: #d7d6d4, $alpha: 1.0);
+    
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.offline{
+    color:red;
+    font-weight: bold;
+}
+
+.online{
+    color:lime;
+    font-weight: bold;
+}
+
+p{
+    display: inline;
+    margin-right: 5px;
+}
+
+button{
+    margin-top: 20px;
+}

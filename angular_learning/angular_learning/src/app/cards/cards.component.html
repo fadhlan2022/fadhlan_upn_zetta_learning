@@ -1,0 +1,27 @@
+<!-- <button class="btn btn-primary" 
+[disabled]="!allowNewServer"
+(click)="">Add Server</button>
+<app-modul1></app-cards> -->
+<div class="row">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{user[0]}}</h5>
+          <p class="card-text">Your status is currently</p> <p [ngClass]="{online:currentStatus1==='online', offline:currentStatus1==='offline'}">{{currentStatus1}}</p>
+          <button class="btn btn-primary" (click)="changeStatus1()">Go <p [ngClass]="{online:currentButton1==='online', offline:currentButton1==='offline'}">{{currentButton1}}!</p></button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{user[1]}}</h5>
+          <p class="card-text">Your status is currently</p> <p [ngClass]="{online:currentStatus2==='online', offline:currentStatus2==='offline'}">{{currentStatus2}}</p>
+          <button class="btn btn-primary" (click)="changeStatus2()">Go <p [ngClass]="{online:currentButton1==='online', offline:currentButton1==='offline'}">{{currentButton1}}!</button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{user[2]}}</h5>
+          <p class="card-text">Your status is currently</p><p [ngClass]="{online:currentStatus3==='online', offline:currentStatus3==='offline'}">{{currentStatus3}}</p>
+          <button class="btn btn-primary" (click)="changeStatus3()">Go <p [ngClass]="{online:currentButton1==='online', offline:currentButton1==='offline'}">{{currentButton1}}!</button>
+        </div>
+      </div>
+    </div>    
