@@ -28,4 +28,6 @@ export class AppComponent {
   onDestroy(){
     this.taskElements.splice(0,100);
   }
+
+
 }

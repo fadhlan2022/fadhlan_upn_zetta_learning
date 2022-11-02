@@ -1,0 +1,8 @@
+<div class="card">
+<div class="card-header" *ngIf="element.type === 'individual'">{{ element.name }}</div>
+<div class="card-header" *ngIf="element.type === 'group'">{{ element.name }} <em style="color: red;">(Group)</em></div>
+<div class="card-body">
+  <strong>{{ element.content }}</strong>
+  
+</div>
+</div>

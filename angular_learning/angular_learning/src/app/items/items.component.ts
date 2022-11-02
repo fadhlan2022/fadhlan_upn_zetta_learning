@@ -23,4 +23,5 @@ export class ItemsComponent implements OnInit {
   onAddGroupTask() {
     this.groupTaskCreated.emit({taskName:this.newTaskName,taskContent:this.newTaskContent})
   }
+
 }
