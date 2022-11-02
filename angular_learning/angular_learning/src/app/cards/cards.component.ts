@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-modul2',
-  templateUrl: './modul2.component.html',
-  styleUrls: ['./modul2.component.scss']
+  selector: 'app-cards',
+  templateUrl: './cards.component.html',
+  styleUrls: ['./cards.component.scss']
 })
-export class Modul2Component implements OnInit {
-  user = ['Victor','Jeff','Robert'];
+export class CardsComponent implements OnInit {
+  user = ['Fadhlan','Hisyam','Ucok'];
   currentStatus1 = 'offline';
   currentStatus2 = 'offline';
   currentStatus3 = 'offline';
