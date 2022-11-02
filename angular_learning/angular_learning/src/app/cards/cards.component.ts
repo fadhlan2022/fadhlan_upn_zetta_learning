@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsComponent implements OnInit {
   user = ['Fadhlan','Hisyam','Ucok'];
-  currentStatus1 = 'offline';
-  currentStatus2 = 'offline';
-  currentStatus3 = 'offline';
+  currentStatus1 = "offline";
+  currentStatus2 = "offline";
+  currentStatus3 = "offline";
+  currentButton1 = "online";
+  currentButton2 = "online";
+  currentButton3 = "online";
   status = true;
 
   changeStatus1(){
@@ -20,6 +24,16 @@ export class CardsComponent implements OnInit {
   }
   changeStatus3(){
     this.currentStatus3 = "online";
+  }
+  
+  changeButton1(){
+    this.currentButton1 = "online";
+  }
+  changeButton2(){
+    this.currentButton2 = "offline";
+  }
+  changeButton3(){
+    this.currentButton3 = "offline";
   }
 
   constructor() { 
