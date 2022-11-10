@@ -1,0 +1,24 @@
+.row{
+  display: flex;
+  justify-content: left;
+}
+.panel{
+  margin: 25px 10px 0px 10px;
+  justify-content: center;
+  text-align: center;
+}
+.panel-heading{
+  text-align: left;
+}
+.tengah{
+  display: flex;
+  align-items: center;
+}
+p{
+  text-align: center;
+}
+.flex-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,50 @@
+<div style="border: 2px solid rgb(219, 219, 219); padding: 16px">
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Item Name</mat-label>
+      <input
+        required
+        matInput
+        [value]="defaultName"
+        placeholder="your item name"
+        #itemName
+      />
+    </mat-form-field>
+  </p>
+  <mat-form-field appearance="fill">
+    <mat-label>Select</mat-label>
+    <mat-select
+      required
+      placeholder="Select Item Status"
+      #itemStatus
+      name="item"
+      [(value)]="defaultStatus"
+    >
+      <mat-option value="Perfect" selected="selected">Perfect</mat-option>
+      <mat-option value="Good">Good</mat-option>
+      <mat-option value="Broken">Broken</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br />
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="addItem(itemName.value, itemStatus.value)"
+    class="btn btn-secondary"
+  >
+    Add Item
+  </button>
+</div>
+<!-- <input type="text" name="item-name" [(ngModel)]="newItemName"> -->
+<!-- <h3>Item Status</h3>
+<input type="radio" value="Good" [(ngModel)]="newItemStatus" /> Good <br />
+<input type="radio" value="Broken" [(ngModel)]="newItemStatus" /> Broken -->
+<br />
+<!-- <p> {{itemStatus}} </p> -->
+<!-- <button
+  (click)="addItem(itemNameInput)"
+  class="btn btn-secondary"
+  [disabled]="itemNameInput === '' || newItemStatus === ''"
+>
+  Add Item
+</button> -->
