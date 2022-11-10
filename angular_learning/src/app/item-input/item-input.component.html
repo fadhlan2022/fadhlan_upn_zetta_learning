@@ -1,0 +1,22 @@
+<div style="border: 2px solid rgb(219, 219, 219); padding: 16px">
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Nama Item</mat-label>
+      <input required matInput [value]="defaultName" placeholder="your item name" #itemName />
+    </mat-form-field>
+  </p>
+  <mat-form-field appearance="fill">
+    <mat-label>Status Item</mat-label>
+    <mat-select required placeholder="Select Item Status" #itemStatus name="item" [(value)]="defaultStatus">
+      <mat-option value="Baik" selected="selected">Baik</mat-option>
+      <mat-option value="Rusak Ringan">Rusak Ringan</mat-option>
+      <mat-option value="Rusak Berat">Rusak Berat</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" (click)="addItem(itemName.value, itemStatus.value)"
+    class="btn btn-secondary">
+    Tambah Item
+  </button>
+</div>
+<br>

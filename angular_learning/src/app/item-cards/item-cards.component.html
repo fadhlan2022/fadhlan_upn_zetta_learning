@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-heading" #heading>
+    <h3>{{ items.itemName }}</h3>
+  </div>
+  <div class="panel-body">
+    <p class="card-text" *ngIf="status === 'Baik'" style="color: white; background-color: green">
+      {{ items.itemStatus }}
+    </p>
+    <p class="card-text" *ngIf="status === 'Rusak Ringan'" style="color: black; background-color: yellow">
+      {{ status }}
+    </p>
+    <p class="card-text" *ngIf="status === 'Rusak Berat'" style="color: white; background-color: red">
+      {{ status }}
+    </p>
+    <ng-content></ng-content>
+  </div>
+</div>
