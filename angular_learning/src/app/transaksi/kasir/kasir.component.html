@@ -1,0 +1,8 @@
+<menu>
+  <section>
+    <app-menu [items]="items" (itemAdded)="addItem($event)"></app-menu>
+  </section>
+  <aside>
+    <app-payment [items]="selectedItems"></app-payment>
+  </aside>
+</menu>

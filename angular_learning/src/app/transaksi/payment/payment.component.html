@@ -1,0 +1,18 @@
+<h1>Pembayaran</h1>
+<table #bgAqua>
+  <tr class="tit" *ngFor="let item of items">
+    <td><span>{{ item.amount }} x {{item.name}}</span></td>
+    <td><span>Rp. {{item.price}}</span> </td>
+    <td> <button type="button" class="btn btn-outline" (click)="removeItem(item)">Remove</button></td>
+
+  </tr>
+  <tr class="tot">
+    <ng-template *ngIf="items.length >0 then totalPayment; else noItem"></ng-template>
+    <ng-template #totalPayment>
+      <td colspan="3"> Total : Rp. {{total}}</td>
+    </ng-template>
+    <ng-template #noItem>
+      <td> No Item Selected</td>
+    </ng-template>
+  </tr>
+</table>

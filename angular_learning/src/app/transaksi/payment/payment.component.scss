@@ -1,0 +1,43 @@
+h1{
+    text-align: center;
+}
+
+button{
+    margin-left: 20%;
+    height: 30px;
+    border: 1.5px solid white;
+    background-color: red;
+    width: 100px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 5px;
+}
+
+table{
+    border: 1px solid;
+    width: 600px;
+    border-spacing: 20px;
+}
+
+span{
+    font-size: 21px;
+    
+}
+
+button:hover{
+    background-color: rgb(168, 5, 5);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+.tit{
+    background-color: white;
+}
+
+.tot{
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: rgb(10, 108, 255);
+}
